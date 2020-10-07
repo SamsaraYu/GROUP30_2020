@@ -131,3 +131,90 @@ public class ReadGraph
 		}
 
 }
+
+
+
+//my code still didnt work , here is the furthest i have got:
+    class Edge{
+        int source, dest;
+
+        public Edge(int source, int dest){
+            this.source = source;
+            this.dest = dest;
+        }
+    }
+
+////used to represent the graph object using adjeceny list
+    class Graph{
+        List<List<Integar>> adList = null;
+
+        Graph(List<Edege> edges, int N){
+            adjust = new ArrayList<>();
+            for (int i =0; i < N; i++){
+                adjList.add(new ArrayList<>());
+            }
+
+        //add edges to the undirected graph
+            for (Edge edge: edges){
+                int src = edge.source;
+                int dest = edge.dest;
+
+                adjList.get(src).add(dest);
+                adjList.get(dest).add(src);
+            }
+    }
+}
+
+    class Main{
+    //add more colours to the vertices
+        public static int color[] = new[];
+
+    //method to assign colors
+        public static void colorGraph(Graph graph, int n){
+        //store color to vertex
+        unordered_map<int, int> result;
+
+        //give every vertex an index
+        for (int j = 0; j< n; j++){
+            for (int i : graph.adjList.get(u)){
+                if (result.containsKey(i)){
+                    assigned.add(result.get(i));                
+                }
+            }
+        }
+    }
+
+//check for the first free color
+        int color =1;
+        for (Integar c : assigned){
+            if (color != c){
+                break;
+            }
+            color++;
+        }
+        result.put(u,color);   //the first avaible color
+    }
+    for (int v = 0; v<N; v++){
+        System.out.println("xxxxxx");
+    }
+}
+
+
+public class GraphColoring2 {
+    
+    //main
+    public static void main(String[] args){
+        List<Edge> edges = Array.asList{
+            new Edge(0,1),
+        }
+        
+        int n = in.nextlnt();
+        Graph graph = new Graph(edges, n);
+    
+        colorGraph(graph,n);
+    }
+    
+}
+
+
+
